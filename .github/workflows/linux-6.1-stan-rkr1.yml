@@ -36,8 +36,6 @@ jobs:
           mkdir linux && mkdir -p dtb/rockchip && mkdir -p modules
           cp -fv arch/arm64/boot/dts/rockchip/rk3588-edgeble-*.dtb dtb/rockchip
           cp -fv arch/arm64/boot/dts/rockchip/rk3588-rock-5b.dtb dtb/rockchip
-          cp -fv arch/arm64/boot/dts/rockchip/overlay/*rk3588*.dtbo dtb/rockchip
-          cp -fv arch/arm64/boot/dts/rockchip/overlay/rock-5b*.dtbo dtb/rockchip
           cp -frv arch/arm64/boot/Image dtb linux
           tar -Jcf linux.tar.xz linux
           cp -frv out/lib/modules/* modules
