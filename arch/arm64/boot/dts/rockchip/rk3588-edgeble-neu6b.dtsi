@@ -17,6 +17,13 @@
 / {
 	/delete-node/ chosen;
 
+	fan0: pwm-fan {
+		compatible = "pwm-fan";
+		#cooling-cells = <2>;
+		cooling-levels = <0 64 128 192 255>;
+		pwms = <&pwm2 0 10000 0>;
+	};
+
 	gpio-leds {
 		compatible = "gpio-leds";
 
