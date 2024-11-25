@@ -10,5 +10,5 @@
 
 / {
 	model = "Edgeble-6C Automotive";
-	compatible = "edgeble,neural-compute-module-6c-io", "rockchip,rk3588";
+	compatible = "edgeble,neural-compute-module-6a-io", "rockchip,rk3588";
 };
