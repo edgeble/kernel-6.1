@@ -8,7 +8,7 @@
 #include <dt-bindings/display/rockchip_vop.h>
 
 /* eDP0 */
-/ {
+&{/} {
 	backlight_edp: backlight-edp {
 		compatible = "pwm-backlight";
 		pwms = <&pwm9 0 25000 0>;
@@ -73,33 +73,9 @@
 	};
 
 	edp_panel: edp-panel {
-		compatible = "simple-panel";
+		compatible = "sharp,lq133t1jw01";
 		backlight = <&backlight_edp>;
 		power-supply = <&vcc3v3_lcd_edp>;
-		pinctrl-names = "default";
-		prepare-delay-ms = <100>;
-		enable-delay-ms = <100>;
-		bpc = <8>;
-		width-mm = <305>;
-		height-mm = <107>;
-		display-timings {
-			native-mode = <&timing0>;
-			timing0: timing0 {
-				clock-frequency = <241500000>;
-				hactive = <2560>;
-				vactive = <1440>;
-				hfront-porch = <80>;
-				hsync-len = <32>;
-				hback-porch = <48>;
-				vfront-porch = <31>;
-				vsync-len = <5>;
-				vback-porch = <3>;
-				hsync-active = <0>;
-				vsync-active = <0>;
-				de-active = <0>;
-				pixelclk-active = <0>;
-			};
-		};
 
 		port {
 			panel_in_edp: endpoint {
