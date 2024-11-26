@@ -215,20 +215,22 @@
 };
 
 &pcie30phy {
-	status = "okay";
-};
-
-/* 4G, miniPCIe*/
-&pcie3x2 {
-	reset-gpios = <&gpio4 RK_PB6 GPIO_ACTIVE_HIGH>; /* PCIE30X4_PERSTn_M1_L */
-	vpcie3v3-supply = <&vcc3v3_minipcie>;
+	rockchip,pcie30-phymode = <PHY_MODE_PCIE_NANBNB>;
 	status = "okay";
 };
 
 /* M-Key */
-&pcie3x4 {
+&pcie3x2 {
 	reset-gpios = <&gpio4 RK_PB0 GPIO_ACTIVE_HIGH>; /* PCIE30X2_PERSTn_M1_L */
 	vpcie3v3-supply = <&vcc3v3_pcie30>;
+	status = "okay";
+};
+
+/* B-Key, E-Key */
+&pcie3x4 {
+	num-lanes = <2>;
+	reset-gpios = <&gpio4 RK_PB6 GPIO_ACTIVE_HIGH>; /* PCIE30X4_PERSTn_M1_L */
+	vpcie3v3-supply = <&vcc3v3_minipcie>;
 	status = "okay";
 };
 
