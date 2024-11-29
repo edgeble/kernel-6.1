@@ -77,8 +77,8 @@
 		};
 	};
 
-	focaltech {
-		focaltech_gpio: focaltech-gpio {
+	gt9xx {
+		gt9xx_gpio: gt9xx-gpio {
 			rockchip,pins =
 					<3 RK_PB7 RK_FUNC_GPIO &pcfg_pull_none>,
 					<0 RK_PD3 RK_FUNC_GPIO &pcfg_pull_up>;
@@ -141,15 +141,18 @@
 	#address-cells = <1>;
 	#size-cells = <0>;
 
-	focaltech: focaltech@38 {
+	gt9xx: gt9xx@14 {
 		status = "okay";
-		compatible = "focaltech,fts";
-		reg = <0x38>;
+		compatible = "goodix,gt9xx";
+		reg = <0x14>;
 		pinctrl-names = "default";
-		pinctrl-0 = <&focaltech_gpio>;
-		focaltech,irq-gpio = <&gpio0 RK_PD3 IRQ_TYPE_LEVEL_LOW>;
-		focaltech,reset-gpio = <&gpio3 RK_PB7 GPIO_ACTIVE_HIGH>;
-		focaltech,display-coords = <0 0 799 1279>;
+		pinctrl-0 = <&gt9xx_gpio>;
+		touch-gpio = <&gpio0 RK_PD3 IRQ_TYPE_LEVEL_LOW>;
+		reset-gpio = <&gpio3 RK_PB7 GPIO_ACTIVE_HIGH>;
+		max-x = <800>;
+		max-y = <1280>;
+		tp-size = <9112>;
+		tp-supply = <&vcc_3v3_s0>;
 	};
 };
 
@@ -222,8 +225,8 @@
 		};
 	};
 
-	focaltech-1 {
-		focaltech_gpio_1: focaltech-gpio-1 {
+	gt9xx-1 {
+		gt9xx_gpio_1: gt9xx-gpio-1 {
 			rockchip,pins =
 					<4 RK_PB2 RK_FUNC_GPIO &pcfg_pull_none>,
 					<3 RK_PD0 RK_FUNC_GPIO &pcfg_pull_up>;
@@ -286,15 +289,18 @@
 	#address-cells = <1>;
 	#size-cells = <0>;
 
-	focaltech_1: focaltech-1@38 {
+	gt9xx_1: gt9xx@14 {
 		status = "okay";
-		compatible = "focaltech,fts";
-		reg = <0x38>;
+		compatible = "goodix,gt9xx";
+		reg = <0x14>;
 		pinctrl-names = "default";
-		pinctrl-0 = <&focaltech_gpio_1>;
-		focaltech,irq-gpio = <&gpio3 RK_PD0 IRQ_TYPE_LEVEL_LOW>;
-		focaltech,reset-gpio = <&gpio4 RK_PB2 GPIO_ACTIVE_HIGH>;
-		focaltech,display-coords = <0 0 799 1279>;
+		pinctrl-0 = <&gt9xx_gpio_1>;
+		touch-gpio = <&gpio3 RK_PD0 IRQ_TYPE_LEVEL_LOW>;
+		reset-gpio = <&gpio4 RK_PB2 GPIO_ACTIVE_HIGH>;
+		max-x = <800>;
+		max-y = <1280>;
+		tp-size = <9112>;
+		tp-supply = <&vcc_3v3_s0>;
 	};
 };
 
