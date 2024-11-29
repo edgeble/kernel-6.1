@@ -3261,8 +3261,8 @@ static int imx415_probe(struct i2c_client *client,
 		imx415->bus_cfg.bus.mipi_csi2.num_data_lanes);
 
 	for (i = 0; i < imx415->cfg_num; i++) {
+		i = 2; /* for 90fps fixed */
 		if (hdr_mode == imx415->supported_modes[i].hdr_mode) {
-			++i;
 			dev_info(dev, "current mode %d, cfg_num %d", i, imx415->cfg_num);
 			imx415->cur_mode = &imx415->supported_modes[i];
 			break;
