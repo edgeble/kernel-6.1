@@ -200,7 +200,7 @@
 	};
 };
 
-/ {
+&{/} {
 	dvdd_1v1_cam5: dvdd-1v1-cam5-regulator {
 		compatible = "regulator-fixed";
 		regulator-name = "dvdd_1v1_cam5";
