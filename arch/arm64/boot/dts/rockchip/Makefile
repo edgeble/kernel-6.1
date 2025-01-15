@@ -263,6 +263,7 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-edgeble-neu6b-io-dsi1-8hd.dtbo
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-edgeble-neu6b-io-dsi01-8hd.dtbo
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-edgeble-neu6b-io-dsi0-8hd-dsi1.dtbo
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-edgeble-neu6b-io-dsi0-dsi1-8hd.dtbo
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-edgeble-neu6b-io-i2c8.dtbo
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-evb1-lp4-v10.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-evb1-lp4-v10-dsi-dsc-MV2100UZ1.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-evb1-lp4-v10-edp-8lanes-M280DCA.dtb
