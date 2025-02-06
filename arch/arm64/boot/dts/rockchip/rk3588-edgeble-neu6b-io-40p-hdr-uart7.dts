@@ -1,0 +1,11 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+
+/dts-v1/;
+/plugin/;
+
+/* GNSS */
+&uart7 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart7m1_xfer>;
+	status = "okay";
+};

@@ -1,0 +1,9 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+
+/dts-v1/;
+/plugin/;
+
+&usbdrd_dwc3_0 {
+	dr_mode = "peripheral";
+	status = "okay";
+};
