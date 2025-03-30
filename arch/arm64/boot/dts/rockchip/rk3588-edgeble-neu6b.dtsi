@@ -15,8 +15,6 @@
 #include "rk3588-linux.dtsi"
 
 / {
-	/delete-node/ chosen;
-
 	fan0: pwm-fan {
 		compatible = "pwm-fan";
 		#cooling-cells = <2>;
