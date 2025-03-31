@@ -12,3 +12,6 @@
 	model = "Edgeble-6C Automotive";
 	compatible = "edgeble,neural-compute-module-6a-io", "rockchip,rk3588";
 };
+
+#include "rk3588-edgeble-neu6b-io-hdmi1.dtsi"
+#include "rk3588-edgeble-neu6b-cam1.dtsi"
